@@ -26,6 +26,8 @@ In this data set we have divided our data into 3 categories:
 2. Test data
 3. Validation data
 ```
-Follwing are the details of Data set:\
+Follwing are the details of Data set: \
 
 ![](Images/dataset_details.JPG)
+
+Chest X-Ray images are taken in different views (AP or PA) depending on which side of the body is facing the X-Ray scanner. Images from different views have slightly different features. For this task, we will be using images without considering their views. A few sample images: \
