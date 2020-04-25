@@ -125,7 +125,7 @@ actual(infected)|566|49|
 actual(normal)|56|829|
 
 <br>
-
+<!--
 ```python
 CASE 3
 ```
@@ -193,7 +193,7 @@ N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
 actual(infected)|-1|-1|
 actual(normal)|-1|-1|
-
+-->
 <br>
 
 ```python
@@ -204,30 +204,30 @@ CASE 5
 Data|Accuracy
 ---------|---------|
 test data|93%
-train data|100%
-validation data|59.00
+train data|92.3%
+validation data|91.4%
 
 **Confusion Matrix Training data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|0|4919|
-actual(normal)|0|6115|
+actual(infected)|4289|630|
+actual(normal)|238|6073|
 
 <br>
 
 **Confusion Matrix Validation data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|0|615|
-actual(normal)|0|885|
+actual(infected)|532|83|
+actual(normal)|46|839|
 
 <br>
 
 **Confusion Matrix Testing data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|0|615|
-actual(normal)|0|885|
+actual(infected)|578|37|
+actual(normal)|9|876|
 
 <br>
 
