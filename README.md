@@ -203,7 +203,7 @@ CASE 5
 **Accuracy**
 Data|Accuracy
 ---------|---------|
-test data|93%
+test data|96%
 train data|92.3%
 validation data|91.4%
 
