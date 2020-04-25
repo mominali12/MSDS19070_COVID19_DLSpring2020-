@@ -21,8 +21,11 @@ import copy
 ## Dataset
 For the task at hand we have used an open source data set of X-Ray images [Dataset](https://drive.google.com/drive/u/1/folders/1-FzZhQO9oHIT9SNOWYoKsuz7fe447vtR)\
 In this data set we have divided our data into 3 categories:
-**1. Train data**\
-**2. Test data**\
-**3. Validation data**\
+```python
+1. Train data
+2. Test data
+3. Validation data
+```
 Follwing are the details of Data set:\
+
 ![](Images/dataset_details.jpg)
