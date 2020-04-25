@@ -25,4 +25,4 @@ In this data set we have divided our data into 3 categories:
 **2. Test data**
 **3. Validation data**
 Follwing are the details of Data set:
-
+![](/images/dataset_details.JPG)
