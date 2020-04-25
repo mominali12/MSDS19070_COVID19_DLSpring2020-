@@ -40,8 +40,6 @@ Case|Model|CNN layers|FC layers
 ----------|----------|requires_grad|requires_grad
 case1|VGG-16|all False|all True
 case2|ResNet-18|all False|all True
-case3|VGG-16|some False|all True
-case4|ResNet-18|some False|all True
 case5|VGG-16|all True|all True
 case6|ResNet-18|all True|all True
 
@@ -58,7 +56,7 @@ case6|ResNet-18|all True|all True
 <br>
 
 ```python
-CASE 1
+CASE 1 VGG-16 FC Layer Only
 ```
 **Accuracy**
 Data Split|Accuracy
@@ -92,7 +90,7 @@ actual(normal)|17|868|
 <br>
 
 ```python
-CASE 2
+CASE 2 ResNet-18 FC Layer Only
 ```
 
 **Accuracy**
@@ -125,79 +123,8 @@ actual(infected)|566|49|
 actual(normal)|56|829|
 
 <br>
-<!--
 ```python
-CASE 3
-```
-
-**Accuracy**
-Data|Accuracy
----------|---------|
-test data|93%
-train data|85.99
-validation data|86.53
-
-**Confusion Matrix Training data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
-
-<br>
-
-**Confusion Matrix Validation data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
-
-<br>
-
-**Confusion Matrix Testing data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
-
-<br>
-
-```python
-CASE 4
-```
-
-**Accuracy**
-Data|Accuracy
----------|---------|
-test data|93%
-train data|85.99
-validation data|86.53
-
-**Confusion Matrix Training data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
-
-<br>
-
-**Confusion Matrix Validation data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
-
-<br>
-
-**Confusion Matrix Testing data**
-N|prediction(infected)|predicted(normal)
----------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
--->
-<br>
-
-```python
-CASE 5
+CASE 3 VGG-16 All Layers 
 ```
 
 **Accuracy**
@@ -232,7 +159,7 @@ actual(normal)|9|876|
 <br>
 
 ```python
-CASE 6
+CASE 4 ResNet-18 All Layers
 ```
 
 **Accuracy**
