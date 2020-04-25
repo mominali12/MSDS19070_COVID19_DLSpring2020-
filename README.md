@@ -56,7 +56,7 @@ case6|ResNet-18|all True|all True
 <br>
 
 ```python
-CASE 1 VGG-16 FC Layer Only
+CASE 1:  (VGG-16 FC Layer Only)
 ```
 **Accuracy**
 Data Split|Accuracy
@@ -90,7 +90,7 @@ actual(normal)|17|868|
 <br>
 
 ```python
-CASE 2 ResNet-18 FC Layer Only
+CASE 2: (ResNet-18 FC Layer Only)
 ```
 
 **Accuracy**
@@ -124,7 +124,7 @@ actual(normal)|56|829|
 
 <br>
 ```python
-CASE 3 VGG-16 All Layers 
+CASE 3: (VGG-16 All Layers )
 ```
 
 **Accuracy**
@@ -159,7 +159,7 @@ actual(normal)|9|876|
 <br>
 
 ```python
-CASE 4 ResNet-18 All Layers
+CASE 4: (ResNet-18 All Layers)
 ```
 
 **Accuracy**
