@@ -28,4 +28,4 @@ In this data set we have divided our data into 3 categories:
 ```
 Follwing are the details of Data set:\
 
-![](Images/dataset_details.jpg)
+![](Images/dataset_details.JPG)
