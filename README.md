@@ -123,6 +123,7 @@ actual(infected)|566|49|
 actual(normal)|56|829|
 
 <br>
+
 ```python
 CASE 3: (VGG-16 All Layers )
 ```
@@ -192,3 +193,10 @@ actual(infected)|575|40|
 actual(normal)|15|870|
 
 <br>
+
+Model|F1 Score|
+-|-|
+VGG16 FC Only|0.93
+Resnet18 FC Only|0.91
+VGG16 All|0.96
+Resnet18 All|0.95
