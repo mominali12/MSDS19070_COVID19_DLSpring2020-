@@ -204,30 +204,30 @@ CASE 5
 Data|Accuracy
 ---------|---------|
 test data|93%
-train data|85.99
-validation data|86.53
+train data|100%
+validation data|59.00
 
 **Confusion Matrix Training data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
+actual(infected)|0|4919|
+actual(normal)|0|6115|
 
 <br>
 
 **Confusion Matrix Validation data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
+actual(infected)|0|615|
+actual(normal)|0|885|
 
 <br>
 
 **Confusion Matrix Testing data**
 N|prediction(infected)|predicted(normal)
 ---------|---------|---------|
-actual(infected)|-1|-1|
-actual(normal)|-1|-1|
+actual(infected)|0|615|
+actual(normal)|0|885|
 
 <br>
 
