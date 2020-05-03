@@ -19,8 +19,18 @@ import copy
 ```
 
 ## Dataset
-For the task at hand we have used an open source [data set](https://drive.google.com/drive/u/1/folders/1-FzZhQO9oHIT9SNOWYoKsuz7fe447vtR) of X-Ray images <br>
-In this data is divided into 3 categories:
+We have two different types of experiements :
+```python
+1. COVID19 Classification part-1
+2. COIVD19 Classification using Focal Loss to cater Samples Imbalance
+```
+Both the experiments utilize different dataset .
+
+a) For COVID19 Classification part1 we have used an open source [data set 1](https://drive.google.com/drive/u/1/folders/1-FzZhQO9oHIT9SNOWYoKsuz7fe447vtR) of X-Ray images <br>
+
+b) For COIVD19 Classification using Focal Loss we have used [data set 2](https://drive.google.com/open?id=1eytbwaLQBv12psV8I-aMkIli9N3bf8nO) <br>
+
+In each dataset the data is divided into 3 parts:
 ```python
 1. Train data
 2. Test data
@@ -34,22 +44,21 @@ Chest X-Ray images are taken in different views (AP or PA) depending on which si
 
 ![](Images/sample_images.JPG)
 
-## Experiments Performed
+## Experiments Performed on Dataset-1
 Case|Model|CNN layers|FC layers
 -----|-----|----------|---------|
 ----------|----------|requires_grad|requires_grad
 case1|VGG-16|all False|all True
 case2|ResNet-18|all False|all True
-case5|VGG-16|all True|all True
-case6|ResNet-18|all True|all True
+case3|VGG-16|all True|all True
+case4|ResNet-18|all True|all True
 
-<!--```python
+```python
 1. Transfer learning on VGG-16 trained for ImageNet by freezing all CNN layers and replacing FC layers with new FC layers.
 2. Transfer learning on ResNet-18 trained for ImageNet by freezing all CNN layers and replacing FC layers with new FC layers.
-3. Transfer learning on VGG-16 trained for ImageNet by freezing some CNN layers and replacing FC layers with new FC layers.
-4. Transfer learning on ResNet-18 trained for ImageNet by freezing some CNN layers and replacing FC layers with  new FC layers.
-5. Transfer learning on VGG-16 trained for ImageNet by unfreezing all layers and replacing FC layers with new FC layers.
-```-->
+3. Transfer learning on VGG-16 trained for ImageNet by unfreezing all layers and replacing FC layers with  new FC layers.
+4. Transfer learning on ResNet-18 trained for ImageNet by unfreezing all layers and replacing FC layers with new FC layers.
+```
 <br>
 
 ## Classification Results
@@ -194,9 +203,141 @@ actual(normal)|15|870|
 
 <br>
 
-Model|F1 Score|
--|-|
-VGG16 FC Only|0.93
-Resnet18 FC Only|0.91
-VGG16 All|0.96
-Resnet18 All|0.95
+## Experiments Performed on Dataset-2
+
+Case|Model|Without Focal Loss|With Focal Loss
+-----|-----|----------|---------|
+----------|----------|requires_grad|requires_grad
+case1|VGG-16|all layers True|all layers True
+case2|ResNet-18|all layers True|all layers True
+
+```python
+1. Transfer learning on VGG-16 trained for ImageNet by unfreezing all CNN layers and replacing FC layers with new FC layers without focal loss.
+2. Transfer learning on ResNet-18 trained for ImageNet by freezing all CNN layers and replacing FC layers with new FC layers without focal loss.
+3. Transfer learning on VGG-16 trained for ImageNet by unfreezing all layers and replacing FC layers with  new FC layers with focal loss.
+4. Transfer learning on ResNet-18 trained for ImageNet by unfreezing all layers and replacing FC layers with new FC layers with focal loss..
+```
+
+<br>
+
+## Classification Results
+<br>
+
+### Without Focal Loss
+
+<br>
+
+**For ResNet18 without Focal Loss (Training Data)**
+
+                 precision    recall  f1-score   support
+
+               0       1.00      0.72      0.84       200
+               1       0.99      0.94      0.97      4000
+               2       0.87      0.99      0.93      2000
+
+        accuracy                           0.95      6200
+       macro avg       0.96      0.89      0.91      6200
+    weighted avg       0.96      0.95      0.95      6200
+ 
+ <br>
+ 
+ **For ResNet18 without Focal Loss (Validation Data)**
+ 
+                  precision    recall  f1-score   support
+
+               0       0.93      0.50      0.65        28
+               1       0.96      0.90      0.93       400
+               2       0.79      0.94      0.86       200
+
+        accuracy                           0.89       628
+       macro avg       0.89      0.78      0.81       628
+    weighted avg       0.90      0.89      0.89       628
+
+<br>
+
+**For VGG16 without Focal Loss (Training Data)**
+
+                  precision    recall  f1-score   support
+
+               0       0.99      0.88      0.93       200
+               1       0.98      1.00      0.99      4000
+               2       0.99      0.96      0.97      2000
+
+        accuracy                           0.98      6200
+       macro avg       0.99      0.95      0.97      6200
+    weighted avg       0.98      0.98      0.98      6200
+
+<br>
+
+**For VGG16 without Focal Loss (Validation Data)**
+
+                  precision    recall  f1-score   support
+
+               0       1.00      0.61      0.76        28
+               1       0.94      0.98      0.96       400
+               2       0.94      0.91      0.92       200
+
+        accuracy                           0.94       628
+       macro avg       0.96      0.83      0.88       628
+    weighted avg       0.94      0.94      0.94       628
+    
+<br>
+
+### With Focal Loss <br>
+**For ResNet18 with Focal Loss (Training Data)**
+
+                  precision    recall  f1-score   support
+
+               0       0.96      0.88      0.92       200
+               1       0.97      0.98      0.98      4000
+               2       0.96      0.95      0.95      2000
+
+        accuracy                           0.97      6200
+       macro avg       0.96      0.94      0.95      6200
+    weighted avg       0.97      0.97      0.97      6200
+
+<br>
+
+**For ResNet18 with Focal Loss (Validation Data)**
+
+                  precision    recall  f1-score   support
+
+               0       1.00      0.64      0.78        28
+               1       0.93      0.95      0.94       400
+               2       0.89      0.89      0.89       200
+
+        accuracy                           0.92       628
+       macro avg       0.94      0.83      0.87       628
+    weighted avg       0.92      0.92      0.92       628
+
+<br>
+
+**For VGG16 with Focal Loss (Training Data)**
+
+                  precision    recall  f1-score   support
+
+               0       0.96      0.82      0.89       200
+               1       0.97      0.99      0.98      4000
+               2       0.97      0.95      0.96      2000
+
+        accuracy                           0.97      6200
+       macro avg       0.97      0.92      0.94      6200
+    weighted avg       0.97      0.97      0.97      6200
+    
+<br>
+
+**For VGG16 with Focal Loss (Validation Data)**
+
+                  precision    recall  f1-score   support
+
+               0       0.94      0.57      0.71        28
+               1       0.94      0.95      0.95       400
+               2       0.88      0.91      0.89       200
+
+        accuracy                           0.92       628
+       macro avg       0.92      0.81      0.85       628
+    weighted avg       0.92      0.92      0.92       628
+    
+<br>
+
+
