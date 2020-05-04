@@ -255,6 +255,12 @@ case2|ResNet-18|all layers True|all layers True
 
 <br>
 
+ *Confusion Matrix*
+ 
+ ![]
+
+<br>
+
 **For VGG16 without Focal Loss (Training Data)**
 
                   precision    recall  f1-score   support
@@ -281,6 +287,13 @@ case2|ResNet-18|all layers True|all layers True
        macro avg       0.96      0.83      0.88       628
     weighted avg       0.94      0.94      0.94       628
     
+<br>
+
+
+ *Confusion Matrix*
+ 
+ ![]
+
 <br>
 
 ### With Focal Loss <br>
@@ -312,6 +325,13 @@ case2|ResNet-18|all layers True|all layers True
 
 <br>
 
+
+ *Confusion Matrix*
+ 
+ ![]
+
+<br>
+
 **For VGG16 with Focal Loss (Training Data)**
 
                   precision    recall  f1-score   support
@@ -338,6 +358,13 @@ case2|ResNet-18|all layers True|all layers True
        macro avg       0.92      0.81      0.85       628
     weighted avg       0.92      0.92      0.92       628
     
+<br>
+
+
+ *Confusion Matrix*
+ 
+ ![]
+
 <br>
 
 
