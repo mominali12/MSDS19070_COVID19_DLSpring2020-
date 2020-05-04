@@ -257,7 +257,7 @@ case2|ResNet-18|all layers True|all layers True
 
  *Confusion Matrix*
  
- ![]
+ ![](Images/cm_resnet_wOFL.JPG)
 
 <br>
 
@@ -292,7 +292,7 @@ case2|ResNet-18|all layers True|all layers True
 
  *Confusion Matrix*
  
- ![]
+ ![](Images/cm_vgg_wOFL.JPG)
 
 <br>
 
@@ -328,7 +328,7 @@ case2|ResNet-18|all layers True|all layers True
 
  *Confusion Matrix*
  
- ![]
+ ![](Images/cm_resnet_wFL.JPG)
 
 <br>
 
@@ -363,7 +363,7 @@ case2|ResNet-18|all layers True|all layers True
 
  *Confusion Matrix*
  
- ![]
+ ![](Images/cm_vgg_wFL.JPG)
 
 <br>
 
